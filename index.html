@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <style>
-    @media (max-width:736px) {
+    @media (max-width:1366px) {
         #mobilehide {
             display: none;
         }
@@ -10,7 +10,16 @@
             visibility: visible;
         }
     }
-    @media (min-width:737px) {
+    @media (max-width:666px) {
+        .ipadhide {
+            display: none;
+        }
+        .ipadshow {
+            visibility: visible;
+        }
+    }
+
+    @media (min-width:1367px) {
         .desktophide {
             display: none;
         }
@@ -52,7 +61,7 @@
 	<div class="container container--large">
 		<div class="flex-row">
 			<div class="logo">
-				<a id="mobilehide" href="index.html">
+				<a id="mobilehide" class="ipadhide" href="index.html">
 					<img src="assets/img/design/logo.png" alt="Dosey Doe Breakfast & BBQ">
                 </a>
 			</div>
@@ -73,9 +82,7 @@
 				</ul>
             </nav>
             <nav id="mobileshow" class="desktophide" style="text-align: center;">
-                <a style="display: block; margin-left: auto; margin-right: auto;" href="index.html">
-					<img src="assets/img/design/logo.png" alt="Dosey Doe Breakfast & BBQ">
-				</a>
+
                 <h3 style="color:#e67437; ">Dosey Doe Breakfast & BBQ </h3>
                 <a href="https://www.doseydoetickets.com/assets/bbqmenufront-ebb6da2ef5528aa5d29a54015ee7c7751973d03f50405a6980af9af8525b38d5.png">The Menu</a>
                 <a href="https://www.doseydoetickets.com/">The Big Barn</a>
@@ -108,10 +115,10 @@
                     <figure>
                         <img src="assets/img/design/hours.svg" alt="Clock">
                     </figure>
-                    <h3>Our Hours</h3>
+                    <h3><strong>Our Hours</h3>
                     <h6>Open for Lunch 6 days a week (not on Sunday!)</h6>
                     <h6>Open for Breakfast 7 days a week</h6>
-                    <h6>Open for Dinner 7 days a week</h6>
+                    <h6>Open for Dinner 7 days a week</strong></h6>
                     <div class="flex-row" id="mobilehide">
                         <div class="pairing">
                             <small><strong>Breakfast:</strong></small>
@@ -211,15 +218,21 @@
             </div>
 </section>
 <section>
-    <div class="container">
+    <div class="container" id="mobilehide">
         <div class="item-showcase">
             <div class="flex-row">
                 <img src="assets/img/design/2.png" alt="BBQ" style="margin-left: 50px; margin-right: -50px;">
-                <img id="mobilehide" src="assets/img/design/3.png" alt="BBQ" style="margin-right: -50px;">
-                <img id="mobilehide" src="assets/img/design/4.png" alt="BBQ" style="margin-right: -50px;">
-                <img id="mobilehide" src="assets/img/design/1.png" alt="BBQ" style="margin-right: 50px;">
+                <img src="assets/img/design/3.png" alt="BBQ" style="margin-right: -50px;">
+                <img src="assets/img/design/4.png" alt="BBQ" style="margin-right: -50px;">
+                <img src="assets/img/design/1.png" alt="BBQ" style="margin-right: 50px;">
             </div>
-            
+        </div>
+    </div>
+    <div class="container" id="mobileshow" class="desktophide">
+        <div class="item-showcase">
+            <div class="flex-row">
+                <img src="assets/img/design/2.png" class="desktophide" alt="BBQ" style="margin-left: 45px; margin-right: -50px;">
+            </div>
         </div>
     </div>
 </section>
